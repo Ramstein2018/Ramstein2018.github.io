@@ -339,13 +339,12 @@
 					emailjs
 						.send("service_qyyf552", "template_spo8hxm", { name, email, phone, message }, "wu5VcQmY99ky-PDGr")
 						.then(() => {
-							$(".successform", $contactform).fadeIn();
-							$contactform.get(0).reset();
-							alert("Your message was sent successfully");
+							console.log("ez");
+							$(".successform", $contactForm).fadeIn();
+							$contactForm.get(0).reset();
 						})
 						.catch(() => {
-							$(".errorform", $contactform).fadeIn();
-							alert("Something went wrong");
+							$(".errorform", $contactForm).fadeIn();
 						});
 				},
 			});
