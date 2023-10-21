@@ -520,6 +520,23 @@
 		<script src="js/app.js"></script>
 		<script src="color/color.js"></script>
 		<script src="js/app-shop.js"></script>
-		<script type="application/ld+json" src="js/schema.json" />
+		<script type="application/ld+json">
+			{
+				"@context": "http:\/\/schema.org",
+				"@type": "Physician",
+				"@id": "https:\/\/atlasintensivecare.com\/",
+				"url": "https:\/\/www.atlasintensivecare.com",
+				"brand": { "name": [] },
+				"name": ["Atlas Intensive Care"],
+				"image": "https:\/\/atlasintensivecare.com\/images\/logo.png",
+				"telephone": "+1 213-582-8527",
+				"openingHours": ["MON 09:00:00-17:00:00", "TUE 09:00:00-17:00:00", "WED 09:00:00-17:00:00", "THU 09:00:00-17:00:00", "FRI 09:00:00-17:00:00"],
+				"contactPoint": [
+					{ "@type": "ContactPoint", "telephone": "+1 213-582-8527", "contactType": "reservations" },
+					{ "@type": "ContactPoint", "telephone": "+1 740-472-8527", "contactType": "customer service" }
+				],
+				"address": { "@type": "PostalAddress", "streetAddress": "7052 Santa Teresa Blvd, #102", "addressLocality": "San Jose", "addressRegion": "CA", "postalCode": "95139", "addressCountry": "USA" }
+			}
+		</script>
 	</body>
 </html>
