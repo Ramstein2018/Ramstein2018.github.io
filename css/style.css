@@ -20191,3 +20191,47 @@ body:not(.touch) .prd-tabs-wrap .btn:focus {
 		padding-left: 30px;
 	}
 }
+
+.page-content .blog {
+	margin: 50px 0;
+}
+.blog .blog-content {
+	font-size: 1.2rem;
+
+}
+.bold {
+	font-weight: 700;
+	display: block;
+	font-size: 1.4rem;
+}
+.blog-image {
+	width: 100%;
+	object-fit: cover;
+	max-height: 500px;
+}
+.underline {
+	text-decoration: underline;
+}
+
+.consult{
+	background-color: #f49c00;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 0;
+}
+@media (min-width: 768px) {
+	.consult{
+		position: fixed;
+		top : 50%;
+		right: 20px;
+		transform: translateY(-50%);
+		z-index: 1;
+		margin: 0;
+	}
+	.consult:hover{
+		background-color: #d98b00;
+	}
+}
