@@ -12691,16 +12691,24 @@ body.noScroll {
 	.navbar-collapse {
 		padding: 0 0 10px;
 	}
+	
 	.navbar-collapse .nav-item > .nav-link,
 	.navbar-collapse .dropdown-item {
 		font-size: 14px;
 		line-height: 20px;
 		padding-top: 8px;
 		padding-bottom: 8px;
+		text-align: center;
+
+	}
+
+	.navbar-collapse .nav-item > .btn{
+		margin: 2px auto;
 	}
 
 	.navbar-collapse .navbar-nav {
-		width: calc(100vw - 30px);
+		/* width: calc(100vw - 30px); */
+		width: 100vw;
 	}
 }
 @media (min-width: 1024px) {
