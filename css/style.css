@@ -13485,7 +13485,7 @@ body.noScroll {
 }
 @media (max-width: 767px) {
 	#mainSlider .slide-txt1 {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	#mainSlider .slide-txt2 {
 		display: none;
