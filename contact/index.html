@@ -60,22 +60,30 @@
         <h2 class="section-title" style="font-size:32px;">We'll <em>get back to you</em> quickly.</h2>
         <p style="color:var(--ink-soft); margin-bottom:32px;">For urgent medical issues, please call us directly at 213-582-8527 or visit your nearest emergency room. This contact form is not for medical emergencies.</p>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will respond within 1 business day. (Note: this form requires backend setup before going live — see README.)');">
+        <!-- Posts to FormSubmit (no backend/signup) -> emails info@atlasintensivecare.com.
+             REQUIRES ONE-TIME ACTIVATION: the first submission triggers a confirmation
+             email to info@ that must be clicked before messages start flowing. -->
+        <form class="contact-form" action="https://formsubmit.co/info@atlasintensivecare.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from atlasintensivecare.com contact form">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://atlasintensivecare.com/">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div>
             <label for="name">Your Name</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div>
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone">
+            <input type="tel" id="phone" name="phone">
           </div>
           <div>
             <label for="topic">What can we help with?</label>
-            <select id="topic">
+            <select id="topic" name="topic">
               <option>New patient inquiry</option>
               <option>Schedule an appointment</option>
               <option>Immigration / I-693 question</option>
@@ -87,7 +95,7 @@
           </div>
           <div>
             <label for="message">Your Message</label>
-            <textarea id="message" required></textarea>
+            <textarea id="message" name="message" required></textarea>
           </div>
           <div>
             <button type="submit">Send Message →</button>
@@ -124,7 +132,7 @@
 
         <div class="contact-info-item">
           <div class="label">Online Booking</div>
-          <div class="value"><a href="https://provider.kareo.com/dr-arun-sharma" target="_blank" rel="noopener">Schedule via Kareo →</a></div>
+          <div class="value"><a href="https://www.tebra.com/care/provider/arun-sharma-md-1558540427#?view=booking" data-booking-link="tebra" target="_blank" rel="noopener">Book Online →</a></div>
         </div>
       </div>
     </div>
