@@ -35,7 +35,9 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-/* Never allow horizontal overflow — stops the mobile "zoomed / sideways slide / partial text" bug */
+/* Stop iOS Safari from auto-inflating text (the real cause of the mobile "zoom / partial text / sideways slide") */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+/* Belt-and-suspenders: never allow horizontal overflow */
 html, body { overflow-x: hidden; max-width: 100%; }
 body {
   font-family: var(--sans);
