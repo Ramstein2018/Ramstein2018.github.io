@@ -178,9 +178,11 @@ nav.main-nav a.active::after {
     width: 100%;
     margin-top: 8px;
   }
-  /* Compact the navy top bar so it doesn't eat the whole first screen */
-  .trust-bar { font-size: 12px; gap: 6px 14px; padding: 8px 16px; line-height: 1.5; }
-  .trust-bar .divider { display: none; }
+  /* Phone: collapse the navy top bar to ONE line — just the phone number.
+     Fax / same-day / multilingual are hidden here (they still show in the footer). */
+  .trust-bar { font-size: 13px; padding: 9px 16px; gap: 0; line-height: 1.4; }
+  .trust-bar > span { display: none; }
+  .trust-bar > span:first-child { display: inline; }
   /* Let the hero badge wrap instead of running off the right edge */
   .hero-badge { white-space: normal; max-width: 100%; text-align: center; }
 }
